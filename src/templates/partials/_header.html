@@ -1,0 +1,28 @@
+{% set
+    icons = [
+        { name: 'fb'},
+        { name: 'twitter'},
+        { name: 'insta'}
+    ]
+%}
+
+<header class="header">
+    <p class="header__info">Enjoy Free Shipping Worldwide, No Minimum Purchase</p>
+    <div class="header__in">
+        <div class="header__row">
+            <div class="header__col">
+                <div class="socials">
+                    {% for icon in icons %}
+                    <div class="social__item">
+                        
+                        <a href="#" class="social__link" data="">{{mixins.icon(icon.name)}}</a>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="header__col"></div>
+            <div class="header__col"></div>
+        </div>
+    </div>
+</header>

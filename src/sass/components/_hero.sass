@@ -1,0 +1,39 @@
+.hero
+	position: relative
+
+	&__slide
+		height: 570px
+		padding-top: 88px
+		padding-left: 80px
+		background-position: right 0 top 0
+		background-size: cover
+
+	&__inner
+		width: 600px
+
+	&__title
+		+fontCGL
+		font-size: 48px
+
+	&__description
+		opacity: 0.5
+		text-transform: uppercase
+		margin-bottom: 40px
+
+	&__slider-btn
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		background-color: transparent
+		font-size: 40px
+
+
+		&:hover path 
+			fill: $gold
+			stroke: $gold
+
+		&--prev
+			left: 24px
+
+		&--next
+			right: 24px

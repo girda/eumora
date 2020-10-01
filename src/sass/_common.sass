@@ -9,3 +9,80 @@ body
 
 .burger
 	display: none
+	+r(900)
+		display: block
+
+.bag, .user
+	display: flex
+	font-size: 18px
+
+	svg
+		height: 22px
+
+	svg, path
+		transition: fill 0.4s ease
+
+	&:hover svg, &:hover path
+		fill: $gold
+
+.user
+	+r(900)
+		display: none
+
+.search
+	position: relative
+	display: flex
+	font-size: 18px
+	text-decoration: none
+	background-color: transparent
+
+	&--mobile
+		display: none
+
+	svg
+		position: relative
+		height: 22px
+		
+		z-index: 1
+
+	&__input
+		position: absolute
+		right: -10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 210px
+		height: 56px
+		padding: 20px
+		border: 1px solid #F4F1EA
+		opacity: 0
+		z-index: -1
+		transition: all 0.4s ease
+
+	&:hover &__input
+		z-index: 0
+		opacity: 1
+
+	&__input:focus
+		z-index: 1
+		opacity: 1
+
+	+r(900)
+		display: none
+		
+		
+
+.bag
+	position: relative
+	&__count
+		position: absolute
+		top: -14px
+		right: -14px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		line-height: 0
+		color: white
+		border-radius: 50%
+		background-color: $gold

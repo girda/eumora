@@ -3,35 +3,7 @@
 	justify-content: space-between
 
 	&__item
-		position: relative
 		margin-right: 32px
 		&:last-child
 			margin-right: 0
 
-		.count
-			position: absolute
-			top: -14px
-			right: -14px
-			display: flex
-			justify-content: center
-			align-items: center
-			width: 24px
-			height: 24px
-			line-height: 0
-			color: white
-			border-radius: 50%
-			background-color: $gold
-
-
-	&__link
-		display: flex
-		font-size: 18px
-
-		svg
-			height: 20px
-
-		svg, path
-			transition: fill 0.4s ease
-
-		&:hover svg, &:hover path
-			fill: $gold

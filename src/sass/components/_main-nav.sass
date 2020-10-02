@@ -1,4 +1,7 @@
 .main-nav
+	transition: transform 0.3s ease
+	z-index: 20
+	$this: &
 
 	&__list
 		display: flex
@@ -53,3 +56,95 @@
 				border: 4px solid transparent
 				border-top: 7px solid black
 				transition: border 0.3s ease
+
+	&__overlay
+		display: none
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
+		background-color: rgba(0, 0, 0, 0.5)
+		transition: all 0.3s ease
+		opacity: 0
+
+	&.is-show
+		transform: translateX(0)
+		#{$this}__overlay
+			transform: translateX(0)
+			opacity: 1
+
+	.socials
+		display: none
+
+
+	+r(900)
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transform: translateX(-100%)
+		&__overlay
+			display: block
+			transform: translateX(200%)
+
+		&__close 
+			button
+				position: absolute
+				top: 20px
+				left: 254px
+				width: 20px
+				height: 20px
+				background-color: transparent
+				z-index: 5
+
+				&:after, &:before 
+					content: ''
+					position: absolute
+					transform: rotate(45deg)
+					left: 4px
+					width: 16px
+					height: 1px
+					background-color: rgba(0, 0, 0, 0.2)
+
+				&:before 
+					transform: rotate(-45deg)
+
+		.socials
+			display: flex
+			justify-content: flex-start
+
+		&__wrapper
+			position: fixed
+			top: 0
+			left: 0
+			bottom: 0
+			width: 290px
+			padding: 24px 16px
+			background-color: #fff
+			box-shadow: 0px 4px 40px rgba(75, 80, 81, 0.1)
+
+		&__list
+			flex-direction: column
+
+		&__search
+			margin-bottom: 32px
+
+		&__item
+			margin-right: 0
+			margin-bottom: 24px
+
+			&:hover
+				ul
+					display: none
+		&__link
+
+			&--arrow:after
+				border: 3px solid transparent
+				border-left: 5px solid black
+
+			&:hover
+				&:after
+					border-top-color: transparent	

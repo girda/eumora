@@ -13,10 +13,26 @@
 		display: flex
 		justify-content: space-between
 
+
 	&__col
 		padding-top: 32px
 
 	&__nav
 
-		.socials
-			display: none
+	+r(900)
+
+		&__in
+			padding: 0 20px
+
+		&__row
+			align-items: center
+
+		&__col
+			padding-top: 0
+
+	+r(600)
+		&__info
+			font-size: 10px
+
+		&__in
+			padding: 0 16px

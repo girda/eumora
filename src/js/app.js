@@ -15,9 +15,18 @@ $(document).ready(() => {
 		}
 	  ]
 	})
+
+	$('.js-search').click(function(event) {
+		$(this).find('input').focus()
+	})
+
+	$('.js-open-menu').click(() => {
+		$('.js-menu').addClass('is-show')
+	})
+
+	$('.js-close-menu').click(() => {
+		$('.js-menu').removeClass('is-show')
+	})
 })
 
-$('.js-search').click(function(event) {
-	$(this).find('input').focus()
 
-})

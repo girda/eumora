@@ -6,11 +6,26 @@ body
 	+r(1200)
 		font-size: 14px
 
+.logo
+	display: flex
+
+	+r(900)
+		img
+			height: 64px
+
 
 .burger
 	display: none
+	background-color: transparent
+	svg
+		height: 22px
+		width: 22px
 	+r(900)
 		display: block
+	+r(600)
+		svg
+			height: 16px
+			width: 16px
 
 .bag, .user
 	display: flex
@@ -35,9 +50,19 @@ body
 	font-size: 18px
 	text-decoration: none
 	background-color: transparent
+	$this: &
 
 	&--mobile
 		display: none
+
+		#{$this}__input
+			position: static
+			opacity: 1
+			top: auto
+			transform: translateY(0)
+			right: 0
+		svg
+			display: none
 
 	svg
 		position: relative
@@ -68,6 +93,9 @@ body
 
 	+r(900)
 		display: none
+
+		&--mobile
+			display: block
 		
 		
 
@@ -75,8 +103,8 @@ body
 	position: relative
 	&__count
 		position: absolute
-		top: -14px
-		right: -14px
+		top: -8px
+		right: -8px
 		display: flex
 		justify-content: center
 		align-items: center
@@ -86,3 +114,13 @@ body
 		color: white
 		border-radius: 50%
 		background-color: $gold
+
+	+r(600)
+
+		&__count
+			width: 16px
+			height: 16px
+			font-size: 14px
+		svg
+			height: 16px
+			width: 16px
